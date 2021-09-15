@@ -8,3 +8,4 @@ environment: sbt
 content:
 - Intro to FP
 - Sqrt
+- TailRec
