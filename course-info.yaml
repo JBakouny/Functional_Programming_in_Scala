@@ -1,0 +1,9 @@
+title: Functional Programming in Scala
+language: English
+summary: |-
+  Functional Programming in Scala.
+  Created: Sep 2021.
+programming_language: Scala
+environment: sbt
+content:
+- lesson1
