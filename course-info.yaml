@@ -6,4 +6,5 @@ summary: |-
 programming_language: Scala
 environment: sbt
 content:
-- lesson1
+- Intro to FP
+- Sqrt
