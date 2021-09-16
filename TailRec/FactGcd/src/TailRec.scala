@@ -10,12 +10,19 @@ object TailRec {
 
   // Implement a tail recursive factoriel function
 
-  def fact(n : BigInt) : BigInt = {
+  def factorial(n : Int) : Int = {
     @tailrec
-    def factIter(acc : BigInt, i : BigInt) : BigInt = {
-      ???
+    def aux(n: Int, acc:Int) :Int =
+      if (n <= 1) acc else aux(n-1, acc*n)
+    aux(1, n)
+  }
+
+  def fact(n : Int) = {
+    @tailrec
+    def aux(a: Int, stackHist: Int = 1): Int = {
+      if (a <= 1) stackHist else aux(a - 1, stackHist * a)
     }
-    factIter(1, n)
+    aux(n)
   }
 
 }
