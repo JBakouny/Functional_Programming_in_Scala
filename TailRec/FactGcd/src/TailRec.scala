@@ -5,21 +5,17 @@ object TailRec {
   def gcd(a: Int, b: Int): Int =
     if (b == 0) a else gcd(b, a % b)
 
-  //  def fact(n : Int) : Int =
-  //    if (n <= 1) 1 else n * fact(n - 1)
+  def fact(n : BigInt) : BigInt =
+    if (n <= 1) 1 else n * fact(n - 1)
 
-  def factorial(n : Int) : Int = {
-    @tailrec
-    def aux(n: Int, acc:Int) :Int =
-      if (n <= 1) acc else aux(n-1, acc*n)
-    aux(1, n)
-  }
+  // Implement a tail recursive factoriel function
 
-  def fact(n : Int) = {
+  def fact(n : BigInt) : BigInt = {
     @tailrec
-    def aux(a: Int, stackHist: Int = 1): Int = {
-      if (a <= 1) stackHist else aux(a - 1, stackHist * a)
+    def factIter(acc : BigInt, i : BigInt) : BigInt = {
+      ???
     }
-    aux(n)
+    factIter(1, n)
   }
+
 }
