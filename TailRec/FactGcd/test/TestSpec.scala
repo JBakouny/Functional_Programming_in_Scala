@@ -12,7 +12,7 @@ class TestSpec extends FunSuite {
   }
 
   test("FactBigInt test") {
-    assert(fact(BigInt(5)) === 120)
+    assert(fact(BigInt(5)) === 121)
   }
 
   test("Gcd test") {

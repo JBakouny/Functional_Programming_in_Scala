@@ -2,8 +2,14 @@ import scala.annotation.tailrec
 
 object Task {
 
-  def mapReduce(zero : Int, op : (Int, Int) => Int, f : Int => Int, a : Int, b : Int): Int =
-    if (a > b) zero else op(f(a), mapReduce(zero, op, f, a + 1, b))
+  def mapReduce(zero : Int, op : (Int, Int) => Int, f : Int => Int, a : Int, b : Int): Int = {
+    @tailrec
+    def helper(acc : Int, i : Int) : Int = {
+      if (i > b) acc
+      else helper(op(acc, f(i)), i + 1)
+    }
+    helper(zero, a)
+  }
 
   def product(f : Int => Int, a : Int, b : Int): Int =
     mapReduce(1, (x, y) => x * y, f, a, b)
