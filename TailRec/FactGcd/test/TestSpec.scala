@@ -1,8 +1,21 @@
 import org.scalatest.FunSuite
 
+import TailRec._
+
 class TestSpec extends FunSuite {
-  //TODO: implement your test here
-  test("First test") {
-    assert(false, "Tests not implemented for the task")
+  test("Factorial test") {
+    assert(factorial(5) === 120)
+  }
+
+  test("Fact test") {
+    assert(fact(5) === 120)
+  }
+
+  test("FactBigInt test") {
+    assert(fact(BigInt(5)) === 120)
+  }
+
+  test("Gcd test") {
+    assert(gcd(21, 14) === 7)
   }
 }
