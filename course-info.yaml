@@ -6,6 +6,6 @@ summary: |-
 programming_language: Scala
 environment: sbt
 content:
-- Intro to FP
+- MapReduce
 - Sqrt
 - TailRec
