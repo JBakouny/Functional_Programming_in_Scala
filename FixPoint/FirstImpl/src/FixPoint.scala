@@ -19,11 +19,8 @@ object FixedPoint {
     iterate(1)
   }
 
-  def averageDamp(f : Double => Double) : Double => Double  = {
-    def res(x : Double) : Double =
-      (x + f(x)) / 2
-    res
-  }
+  def averageDamp(f : Double => Double) (x : Double) : Double =
+    (x + f(x)) / 2
 
   // (Double => Double) => Double => Double
 
