@@ -23,4 +23,8 @@ class TestSpec extends FunSuite {
   test("Testing the sumFact function") {
     assert(sumFact(5, 10) == 4037880, "sumFact impl is incorrect")
   }
+
+  test("Testing the product function") {
+    assert(product(x => x * x)(5, 10) == 1386603520, "product impl is incorrect")
+  }
 }
