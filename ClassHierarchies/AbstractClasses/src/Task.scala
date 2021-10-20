@@ -48,11 +48,12 @@ object Task {
   def main(args: Array[String]): Unit = {
 
     // Tree
-    val t = new Empty
-    val t2 = t.incl(10)
-    val t3 = t2.incl(3).incl(17)
+    val t = (new Empty).incl(10).incl(3).incl(17)
+    val t2 = t.incl(5)
 
-    println(t3)
+
+    println(t)// thread1
+    println(t2) // thread2
 
     //List
     val vide = new Nil
