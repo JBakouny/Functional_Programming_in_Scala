@@ -2,6 +2,7 @@ import scala.annotation.tailrec
 
 object Task {
 
+  @tailrec
   def mapReduce(zero : Int, op : (Int, Int) => Int)(f : Int => Int)(a : Int, b : Int): Int =
       if (a > b) zero else mapReduce(op(zero, f(a)), op)(f)(a + 1, b)
 

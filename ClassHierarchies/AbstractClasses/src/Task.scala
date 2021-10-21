@@ -4,9 +4,9 @@ abstract class IntSet {
   def contains(x: Int): Boolean
 }
 
-class Empty extends IntSet {
+object Empty extends IntSet {
   def contains(x: Int): Boolean = false
-  def incl(x: Int): IntSet = new NonEmpty(x, new Empty, new Empty)
+  def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
 
   override def toString: String = "."
 }
@@ -48,7 +48,7 @@ object Task {
   def main(args: Array[String]): Unit = {
 
     // Tree
-    val t = (new Empty).incl(10).incl(3).incl(17)
+    val t = Empty.incl(10).incl(3).incl(17)
     val t2 = t.incl(5)
 
 
